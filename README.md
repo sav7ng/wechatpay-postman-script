@@ -159,6 +159,10 @@ postman 的 `pull changes` 可能会需要等待一定时间完成。如果遇�
 
 通常是环境 Environments 里配置的变量 `merchantPrivateKey` 填写有误导致的。脚本接收的私钥，以 `-----BEGIN PRIVATEKEY-----` 开始，以 `-----END PRIVATE KEY-----` 结束的一串字符串。
 
+### 发起请求的时候遇到错误提示“There was an error in evaluating the Pre-request Script:Error: Invalid PEM formatted message.”
+
+是因为再填写`Environments`的变量的时候填在了`Initial value`导致导致脚本获取值的时候空导致，应该填在`Current value`当中，这样即可解决该问题
+
 ### 为什么我发送请求很慢？
 
 如果你使用的网页版 Postman，请使用桌面版 [Postman app](https://www.postman.com/downloads/)。因为浏览器中跨域资源共享（CORS）的限制，网页版发送请求是由 Postman 后台中转的。
