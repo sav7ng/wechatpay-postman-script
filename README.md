@@ -161,7 +161,7 @@ postman 的 `pull changes` 可能会需要等待一定时间完成。如果遇�
 
 ### 发起请求的时候遇到错误提示“There was an error in evaluating the Pre-request Script:Error: Invalid PEM formatted message.”
 
-是因为再填写`Environments`的变量的时候填在了`Initial value`导致导致脚本获取值的时候空导致，应该填在`Current value`当中，这样即可解决该问题
+是因为在填写`Environments`变量的时候，把值填在了`Initial value`列里引起的脚本取值异常为空，应该填在`Current value`当中，这样即可解决该问题。
 
 ### 为什么我发送请求很慢？
 
